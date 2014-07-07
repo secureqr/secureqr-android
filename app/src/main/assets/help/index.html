@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generate Secure QR codes and verify them with an Android App.">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <link rel="author" href="https://plus.google.com/113087589757049332920"/>
+
+    <script src="javascript/libs/jquery-1.10.2.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="stylesheets/flat-ui.css">
+
+    <!-- our own stylesheet -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="javascript/libs/bootstrap.min.js"></script>
+
+    <title>Secure QR</title>
+</head>
+
+<body>
+<div class="container">
+<h2>About</h2>
+<p>This app is a QR code reader with additional features. These features are meant to protect users from potentially malicious QR codes. You can enable and disable these security checks from the Settings-menu. <strong>Note that these security checks (including Google Safe Browsing) are not perfect. We do our best to keep false positives at a minimum, but they can still happen. If you encounter such a false positive, <a href="https://twitter.com/thomasrieder">please let us know so we can improve our App.</a></strong></p>
+<p>In case you want to generate your own signed QR code or find out more about the Secure QR project, <a href="https://qr.rieder.io">head on over to our website.</a></p>
+
+<h5>Security Checks</h5>
+<h6>Error Rate</h6>
+<p>
+    The app checks for an abnormally high error rate in the QR code. A high error rate might indicate that the code has been tampered with.
+</p>
+
+<h6>Phishtank</h6>
+<p>
+    URLs are verified against the <a href="https://www.phishtank.com/">Phishtank API</a> to detect malicious URLs.
+</p>
+
+<h6>Redirect Count</h6>
+<p>
+    The app warns if a scanned QR code wants to redirect the user a large number of times, as this might indicate that the URL is trying to hide its "real" identity or create a redirection loop.
+</p>
+
+<h6>Google Safe Browsing</h6>
+<p>
+    All URLs are checked against Google's <a href="https://developers.google.com/safe-browsing/">Safe Browsing lists</a> of known malicious URLs.
+</p>
+
+<h6>Dynamic DNS</h6>
+<p>
+    The user is warned if an URL uses a hostname that is backed by a dynamic DNS service. This is due to the fact, that these hostnames have a very high abuse potential due to their volatility.
+</p>
+
+<h6>Robots.txt</h6>
+<p>
+    The app checks whether the site may be indexed by search engines. If a QR code is scanned in public, and the site disallows all crawlers, this quite strange. If you put up a QR code in a public place, you <strong>want</strong> your website to be found.
+</p>
+<p>
+    <em>Note: this check is disabled by default due to a high possibility of false positives.</em>
+</p>
+
+<h6>Website Age</h6>
+<p>
+    The <a href="https://archive.org/web/">Wayback Machine</a> is asked about when it has first seen the root page of the scanned website. Phishing sites are created and destroyed quite rapidly. This is why "young" websites, whose QR codes are found in public places, might be malicious.
+</p>
+<p>
+    <em>Note: this check is disabled by default due to a high possibility of false positives.</em>
+</p>
+</div>
+</body>
+</html>

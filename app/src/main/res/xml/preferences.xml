@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/preferences_general_settings">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_beep"
+            android:title="@string/preferences_beep_enabled" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_vibrate"
+            android:title="@string/preferences_vibrate_enabled" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_copy_clipboard"
+            android:summary="@string/preferences_copy_to_clipboard_summary"
+            android:title="@string/preferences_copy_to_clipboard" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preferences_performed_checks">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_check_safebrowsing"
+            android:title="@string/preferences_check_safebrowsing"
+            android:summary="@string/preferences_check_safebrowsing_desc" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_check_phishtank"
+            android:title="@string/preferences_check_phishtank"
+            android:summary="@string/preferences_check_phishtank_desc" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_check_errorrate"
+            android:title="@string/preferences_check_errorrate"
+            android:summary="@string/preferences_check_errorrate_desc" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_check_dns_age"
+            android:title="@string/preferences_check_dns_age"
+            android:summary="@string/preferences_check_dns_age_desc" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_check_redirect_count"
+            android:title="@string/preferences_check_redirect_count"
+            android:summary="@string/preferences_check_redirect_count_desc" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_check_if_public"
+            android:title="@string/preferences_check_if_public"
+            android:summary="@string/preferences_check_if_public_desc" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_check_website_age"
+            android:title="@string/preferences_check_website_age"
+            android:summary="@string/preferences_check_website_age_desc" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_check_signature"
+            android:title="@string/preferences_check_signature"
+            android:summary="@string/preferences_check_signature_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preferences_enabled_types">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_scan_qr"
+            android:title="@string/preferences_scan_qr" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_scan_1d_product"
+            android:title="@string/preferences_scan_1d_product" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_scan_1d_industrial"
+            android:title="@string/preferences_scan_1d_industrial" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preferences_scan_data_matrix"
+            android:title="@string/preferences_scan_data_matrix" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_scan_aztec"
+            android:title="@string/preferences_scan_aztec" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferences_scan_pdf417"
+            android:title="@string/preferences_scan_pdf417" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preferences_advanced">
+        <EditTextPreference
+            android:defaultValue="qr.rieder.io"
+            android:key="preferences_signature_host"
+            android:summary="@string/preferences_signature_host_summary"
+            android:title="@string/preferences_signature_host" />
+        <EditTextPreference
+            android:defaultValue="443"
+            android:key="preferences_signature_port"
+            android:inputType="number"
+            android:summary="@string/preferences_signature_port_summary"
+            android:title="@string/preferences_signature_port" />
+        <ListPreference
+            android:key="preferences_signature_protocol"
+            android:entries="@array/signature_protocol"
+            android:summary="@string/preferences_signature_protocol_summary"
+            android:entryValues="@array/signature_protocol"
+            android:title="@string/preferences_signature_protocol" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

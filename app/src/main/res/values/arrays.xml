@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="signature_protocol">
+        <item name="http">HTTP</item>
+        <item name="https">Secure HTTP</item>
+    </string-array>
+</resources>

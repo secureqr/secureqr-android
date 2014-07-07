@@ -1,0 +1,15 @@
+a.active {
+    color: #1abc9c !important;
+}
+
+#encodeButton > a {
+    color: #FFFFFF;
+}
+
+.bottom-pad-image {
+    margin-bottom: 3em;
+}
+
+.table-margin-top {
+    margin-top: 4em;
+}
